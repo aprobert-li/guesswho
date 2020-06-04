@@ -4,7 +4,7 @@ const mongo = require('mongodb').MongoClient;
 const dburl = 'mongodb+srv://user1:test123@arpcluster-ptido.azure.mongodb.net/guesswho?retryWrites=true&w=majority';
 var port = process.env.port || 8000;
 
-app.use(express.static('static'));
+app.use(express.static(__dirname+'/public'));
 app.use(express.json());
 app.use(express.text());
 
