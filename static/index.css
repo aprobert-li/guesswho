@@ -1,0 +1,57 @@
+/* STYLE FOR INDEX PAGE */
+body {
+  background-color: #FCD04B;
+  font-family: 'Fredoka One';
+}
+
+#instructions {
+  width: 90vw;
+  position: relative;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  font-size: 9em;
+  text-align: center;
+  color:#EFA424;
+}
+
+#selectgame {
+  font-size: 2em;
+  color: white;
+}
+
+#createnew {
+  text-decoration: none;
+  color: #74C3E1;
+}
+
+#games {
+  position: fixed;  
+  width: 90vw;
+  height: auto;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+  
+li {
+  width: 17vw;
+  text-align: center;
+  padding: 1.5% 1%;
+  margin: 1% 1.5%;
+  font-size: x-large;
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  background-color: #FCAD26;
+  border: 5px solid white;
+  color: white;
+}  
+li:hover {
+  background-color:white;
+  border: 5px solid #FCAD26;
+  color: #FCAD26;
+}

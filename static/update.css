@@ -1,0 +1,86 @@
+body {
+    background-color: #F9FAFA;
+    font-family: 'Fredoka One';
+}
+
+input {
+    border: 3px solid #FCAD26;
+}
+input:focus {
+    outline: none !important;
+    border: 3px solid #74C3E1;
+}
+
+#whichCollection {
+    width: 30vw;
+    font-size: x-large;
+    padding: 0.5%;
+    margin-bottom: 3vh;
+    margin-right: 3vw;
+}
+
+.updateCollection {
+    font-size: large;
+    display: inline-block;
+    width: 12vw;
+    padding: 0.5%;
+    text-align: center;
+    background-color: #EFA424;
+    border: 3px solid #FCAD26;
+    color: white;
+    cursor: pointer;
+}
+.updateCollection:hover {
+    background-color: white;
+    border: 3px solid #FCAD26;
+    color: #EFA424;
+}
+
+.updateRow {
+    width: 99vw;
+    height: auto;
+    position: relative;
+}
+
+.imagelink {
+    width: 50vw;
+    font-size: large;
+    padding: 0.3%;
+    margin-top: 3px;
+}
+.imagelink:last-of-type {
+    margin-bottom: 1vh;
+}
+.inputname {
+  width: 20vw;
+  font-size: large;
+  padding: 0.2%;
+  margin-right: 1vw;
+}
+
+#previewPhoto {
+    position: fixed;
+    top: 5vh;
+    right: 1vw;
+    width: 13vw;
+    height: 21vh;
+    border: 2px solid #FCAD26;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+#movePhoto {
+    position: fixed;
+    top: 28vh;
+    right: 1vw;
+    width: 13vw;
+    height: auto;
+    margin-top: 2px;
+}
+.move {
+    margin-left: 0.5vw;
+}
+
+#submitlinks {
+    display: none;
+}
