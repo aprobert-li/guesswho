@@ -11,7 +11,7 @@ colNameBtn.addEventListener('click', function() {
     console.log(collectionName);
     showColData(collectionName);
     
-    $.get("http://localhost:8000/getupdates", function(data, status) {
+    $.get("/getupdates", function(data, status) {
         
         var photos = document.querySelectorAll('.imagelink');
         var peoplenames = document.querySelectorAll('.inputname');
@@ -61,7 +61,7 @@ $('.imagelink').focus(function() {
     preview.style.backgroundImage = `url(${inputValue})`;
     var thisId = $(this).parent().find('.imagelink').attr('id');
     console.log(thisId);
-    $.get("http://localhost:8000/getupdates", function(data, status) {
+    $.get("/getupdates", function(data, status) {
         posX = data[thisId].posX;
         posY = data[thisId].posY;
         $(preview).css('background-position-x', posX+"px");

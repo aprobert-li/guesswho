@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //GET IMAGES AND NAMES FROM DATABASE WITH API CALL
-    $.get("http://localhost:8000/getgamedata", function(data, status) {
+    $.get("/getgamedata", function(data, status) {
         console.log(data);
         
         var people = document.querySelectorAll('.person');
