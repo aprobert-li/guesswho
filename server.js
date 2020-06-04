@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const mongo = require('mongodb').MongoClient;
-const dburl = 'mongodb+srv://user1:test123@arpcluster-ptido.azure.mongodb.net/guesswho?retryWrites=true&w=majority';
+const db_pword="test123";
+const db_name="guesswho";
+const dburl = `mongodb+srv://user1:${db_pword}@arpcluster-ptido.azure.mongodb.net/${db_name}?retryWrites=true&w=majority`;
 var port = process.env.port || 8000;
 
 app.use(express.static(__dirname+'/public'));
