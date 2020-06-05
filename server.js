@@ -7,7 +7,7 @@ const mongo = require('mongodb').MongoClient;
 const dburl = process.env.MONGODB_URI;
 var port = process.env.PORT || 8000;
 
-app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+'/static'));
 app.use(express.json());
 app.use(express.text());
 
