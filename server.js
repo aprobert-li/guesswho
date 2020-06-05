@@ -5,7 +5,7 @@ const mongo = require('mongodb').MongoClient;
 //const db_name="guesswho";
 //const dburl = `mongodb+srv://user1:${db_pword}@arpcluster-ptido.azure.mongodb.net/${db_name}?retryWrites=true&w=majority`;
 const dburl = process.env.MONGODB_URI;
-var port = process.env.port || 8000;
+var port = process.env.PORT || 8000;
 
 app.use(express.static(__dirname+'/public'));
 app.use(express.json());
