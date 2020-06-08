@@ -4,14 +4,6 @@ body {
   font-family: 'Fredoka One';
 }
 
-#instructions {
-  width: 90vw;
-  position: relative;
-  height: auto;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 h1 {
   font-size: 9em;
   text-align: center;
@@ -54,4 +46,22 @@ li:hover {
   background-color:white;
   border: 5px solid #FCAD26;
   color: #FCAD26;
+}
+
+@media only screen and (max-device-width: 1000px) and (orientation: landscape) {
+  h1 {
+    width: 45vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    font-size: 7em;
+  }
+  #games {
+    width: 45vw;
+    top: 0;
+    right: 0;
+    border: 2px solid blue;
+    transform: translateX(0);
+    margin: 0;
+  }
 }

@@ -117,9 +117,10 @@ body {
 
 @media only screen and (max-device-width: 600px) {
   #board-container {
-    width: 80vw;
+    width: 100vw;
     height: auto;
     position: relative;
+    margin-top: 20vh;
   }
   #board {
     grid-template-columns: repeat(2, 1fr);
@@ -131,7 +132,10 @@ body {
     height: 20%;
   }
   #sidebar {
-    width: 17vw;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
   }
   #edit {
     display: none;
