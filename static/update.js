@@ -53,20 +53,29 @@ $('.imagelink').change(function() {
     
 })
 $('.imagelink').focus(function() {
-    //posX = 0;
-    //posY = 0;
-    //$(preview).css('background-position-x', posX+"px");
-    //$(preview).css('background-position-y', posY+"px");
+    $('.inputname').removeClass('selectedPerson');
+    $('.imagelink').removeClass('selectedPerson');
+    $('.updateBtn').removeClass('selectedPerson');
     var inputValue = $(this).val();
     preview.style.backgroundImage = `url(${inputValue})`;
     var thisId = $(this).parent().find('.imagelink').attr('id');
-    console.log(thisId);
+    $(this).addClass('selectedPerson');
+    $(this).parent().find('.inputname').addClass('selectedPerson');
+    $(this).parent().find('.updateBtn').addClass('selectedPerson');
     $.get("/getupdates", function(data, status) {
         posX = data[thisId].posX;
         posY = data[thisId].posY;
         $(preview).css('background-position-x', posX+"px");
         $(preview).css('background-position-y', posY+"px");
     });
+})
+$('.inputname').focus(function() {
+    $('.inputname').removeClass('selectedPerson');
+    $('.imagelink').removeClass('selectedPerson');
+    $('.updateBtn').removeClass('selectedPerson');
+    $(this).addClass('selectedPerson');
+    $(this).parent().find('.imagelink').addClass('selectedPerson');
+    $(this).parent().find('.updateBtn').addClass('selectedPerson');
 })
 
 $('#left').click(function() {
@@ -95,7 +104,6 @@ $('.updateBtn').click(function() {
     updateDataPost = {"collection": collectionName, "originalName": originalName, "name": thisName, "image": thisLink, "posX": posX, "posY": posY};
     updateDb(updateDataPost);
 
-    //alert(thisName + " " + thisLink + " " + posX + " X " + posY + " Y ");
 })
 
 

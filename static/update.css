@@ -8,7 +8,6 @@ input {
 }
 input:focus {
     outline: none !important;
-    border: 3px solid #74C3E1;
 }
 
 #whichCollection {
@@ -83,4 +82,8 @@ input:focus {
 
 #submitlinks {
     display: none;
+}
+.selectedPerson {
+    background-color: #74C3E1;
+    color: white;
 }
