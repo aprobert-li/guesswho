@@ -5,8 +5,8 @@ const db_pword="test123";
 const db_name="guesswho";
 const dburl = `mongodb+srv://user1:${db_pword}@arpcluster-ptido.azure.mongodb.net/${db_name}?retryWrites=true&w=majority`;
 //const dburl = process.env.MONGODB_URI;
-//var port = process.env.PORT || 8000;
-var port = 8000;
+var port = process.env.PORT || 8000;
+
 
 app.use(express.static(__dirname+'/static'));
 app.use(express.json());

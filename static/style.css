@@ -104,16 +104,15 @@ body {
   height: 23vh;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 50%;
 }
 
-#edit {
-  position: fixed;
-  bottom: 0;
-  color: #667074;
-}
-#editText {
+#editlink {
+  text-decoration: none;
   text-align: center;
+  color: #C0C7CA;
 }
+
 
 @media only screen and (max-device-width: 600px) {
   #board-container {
