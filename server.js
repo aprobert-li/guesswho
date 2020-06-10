@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const mongo = require('mongodb').MongoClient;
-const db_pword="test123";
-const db_name="guesswho";
-const dburl = `mongodb+srv://user1:${db_pword}@arpcluster-ptido.azure.mongodb.net/${db_name}?retryWrites=true&w=majority`;
-//const dburl = process.env.MONGODB_URI;
+//const db_pword="test123";
+//const db_name="guesswho";
+//const dburl = `mongodb+srv://user1:${db_pword}@arpcluster-ptido.azure.mongodb.net/${db_name}?retryWrites=true&w=majority`;
+const dburl = process.env.MONGODB_URI;
 var port = process.env.PORT || 8000;
 
 
@@ -85,7 +85,7 @@ mongo.connect(dburl, {useUnifiedTopology:true}, function(error, client) {
         })
         console.log(req.body);
     })
-    
+    db.close();
 })
 
 var server = app.listen(port);
