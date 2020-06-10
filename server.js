@@ -85,7 +85,7 @@ mongo.connect(dburl, {useUnifiedTopology:true}, function(error, client) {
         })
         console.log(req.body);
     })
-    
+    db.close();
 })
 
 var server = app.listen(port);
