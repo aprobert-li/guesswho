@@ -17,6 +17,14 @@ body {
     text-align: center;
     font-size: xx-large;
 }
+#steps {
+    color: #EFA424;
+    font-size: medium;
+    padding-right: 3%;
+}
+li {
+    margin-bottom: 3vh;
+}
 
 input {
     border: 3px solid #FCAD26;
