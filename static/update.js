@@ -118,6 +118,9 @@ $('#no').click(function() {
     $('.confirm').fadeTo('fast', 0.0);
 })
 
+$('#returnHome').click(function() {
+    location.replace("/index.html");
+})
 
 function updateDb(updates) {
     var xhr = new XMLHttpRequest();

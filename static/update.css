@@ -87,6 +87,15 @@ input:focus {
     background-color: #74C3E1;
     color: white;
 }
+#returnHome {
+    position: fixed;
+    right: 1vw;
+    bottom: 10vh;
+    color: #FCAD26;
+}
+#returnHome:hover {
+    cursor: pointer;
+}
 .updated {
     color: #74C3E1;
     display: inline-block;
