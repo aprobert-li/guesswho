@@ -44,6 +44,7 @@ mongo.connect(dburl, {useUnifiedTopology:true}, function(error, client) {
         //Use this collection
         thisCol = db.collection(collectionName);
         thisCol.insertMany(req.body);
+        //res.setHeader("Set-Cookie", ["SameSite=None"]);
         
         //Send this collection's name and image links data to be used in the game play
         app.get('/newgamedata', function(req, res) {
@@ -84,6 +85,13 @@ mongo.connect(dburl, {useUnifiedTopology:true}, function(error, client) {
             console.log('update with ' + updateValues);
         })
         console.log(req.body);
+    })
+
+    app.post('/drop', function(req, res) {
+        var dropCol = db.collection(req.body);
+        dropCol.drop(function(err, ok) {
+            console.log("dropped");
+        })
     })
     
 })

@@ -87,3 +87,40 @@ input:focus {
     background-color: #74C3E1;
     color: white;
 }
+.updated {
+    color: #74C3E1;
+    display: inline-block;
+    opacity: 0;
+}
+#confirmDrop {
+    width: 100%;
+    opacity: 0;
+}
+#drop {
+    display: inline-block;
+    background-color: tomato;
+    color: white;
+    border: 3px solid #A22116;
+    padding: 1%;
+}
+#drop:hover {
+    cursor: pointer;
+    background-color: #A22116;
+    color: white;
+    border: 3px solid tomato;
+}
+p {
+    display: inline-block;
+    margin-left: 5%;
+    color: slategray;
+    opacity: 0;
+}
+.confirm {
+    display: inline-block;
+    margin-left: 3%;
+    opacity: 0;
+}
+.confirm:hover {
+    color: tomato;
+    cursor: pointer;
+}

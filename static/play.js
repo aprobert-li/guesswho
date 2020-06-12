@@ -1,4 +1,4 @@
-//$(document).ready(function() {
+$(document).ready(function() {
     //GET IMAGES AND NAMES FROM DATABASE WITH API CALL
     $.get("/getgamedata", function(data, status) {
         console.log(data);
@@ -23,6 +23,6 @@
     });
 
     
-//})
+})
 
 

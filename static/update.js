@@ -10,6 +10,7 @@ colNameBtn.addEventListener('click', function() {
     collectionName = whichCollection.value;
     console.log(collectionName);
     showColData(collectionName);
+    $('#confirmDrop').fadeTo('fast', 1.0);
     
     $.get("/getupdates", function(data, status) {
         
@@ -35,8 +36,7 @@ colNameBtn.addEventListener('click', function() {
             var inputValue = $(this).val();
             var inputValueUpdate = inputValue.replace('open', 'uc');
             preview.style.backgroundImage = `url(${inputValueUpdate})`;
-        })*/
-            
+        })*/    
     })
     
 })
@@ -95,11 +95,27 @@ $('.updateBtn').click(function() {
     var thisName = $(this).parent().find('.inputname').val();
     var thisLink = $(this).parent().find('.imagelink').val();
     var originalName = $(this).parent().find('.inputname').attr('placeholder');
-    console.log(originalName);
+    var updateNotice = $(this).parent().find('.updated');
+    $('.updated').fadeTo('fast', 0.0);
+    $(updateNotice).fadeTo('fast', 1.0);
+
 
     updateDataPost = {"collection": collectionName, "originalName": originalName, "name": thisName, "image": thisLink, "posX": posX, "posY": posY};
     updateDb(updateDataPost);
 
+})
+
+$('#drop').click(function() {
+    $('p').fadeTo('fast', 1.0);
+    $('.confirm').fadeTo('fast', 1.0);
+})
+$('#yes').click(function() {
+    dropCollection(collectionName);
+    location.replace("/index.html");
+})
+$('#no').click(function() {
+    $('p').fadeTo('fast', 0.0);
+    $('.confirm').fadeTo('fast', 0.0);
 })
 
 
@@ -110,10 +126,16 @@ function updateDb(updates) {
     xhr.send(JSON.stringify(updates));
 }
 
-
 function showColData(x) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', "/update");
     xhr.setRequestHeader('Content-Type', 'text/plain');
     xhr.send(x);
+}
+
+function dropCollection(d) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', "/drop");
+    xhr.setRequestHeader('Content-Type', "text/plain");
+    xhr.send(d);
 }
